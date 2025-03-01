@@ -110,7 +110,6 @@ fn test_claim_reward() {
     rewards.claim_reward();
 
     let winner_info = rewards.get_winner_info(player1());
-    // Use proper tuple destructuring
     let (_, _, claimed, _) = winner_info;
     assert!(claimed == true, "Reward claim status not updated");
 
