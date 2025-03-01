@@ -228,7 +228,6 @@ pub mod TournamentReward {
             (rank, reward_info.reward_amount, reward_info.claimed, reward_info.claim_timestamp)
         }
 
-        // Implement the getter functions
         fn get_prize_pool(self: @ContractState) -> u256 {
             self.prize_pool.read()
         }

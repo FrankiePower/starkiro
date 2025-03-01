@@ -196,7 +196,6 @@ fn test_update_prize_pool() {
     cheat_caller_address(contract_address, owner(), CheatSpan::TargetCalls(1));
     rewards.update_prize_pool(new_prize_pool);
 
-    // Use the getter function instead of direct storage access
     assert!(rewards.get_prize_pool() == new_prize_pool, "Prize pool not updated");
 
     spy
@@ -236,7 +235,6 @@ fn test_end_tournament() {
     cheat_caller_address(contract_address, owner(), CheatSpan::TargetCalls(1));
     rewards.end_tournament();
 
-    // Use the getter function instead of direct storage access
     assert!(rewards.is_tournament_ended() == true, "Tournament not ended");
 
     spy
